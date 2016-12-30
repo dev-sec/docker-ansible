@@ -55,7 +55,7 @@ Sebastian Gumprich <sebastian.gumprich@38.de>
 [docker-ubuntu1204-ansible-19]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1204-ansible-19/Dockerfile
 [docker-ubuntu1204-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1204-ansible-latest/Dockerfile
 [docker-ubuntu1404-ansible-19]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1404-ansible-19/Dockerfile
-[docker-ubuntu1404-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1404-ansible-19/Dockerfile
+[docker-ubuntu1404-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1404-ansible-latest/Dockerfile
 [docker-ubuntu1604-ansible-19]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1604-ansible-19/Dockerfile
 [docker-ubuntu1604-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1604-ansible-latest/Dockerfile
 
