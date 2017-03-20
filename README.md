@@ -1,7 +1,7 @@
 # Summary
 These are Docker containers that include ansible latest stable 2.x version.
 
-They are meant for testing purposes and are mainly used [here](https://github.com/dev-sec/) and here [here](https://github.com/rndmh3ro/ansible-test-framework).
+They are meant for testing purposes and are mainly used for [dev-sec](https://github.com/dev-sec/) and the [ansible-test-framework](https://github.com/rndmh3ro/ansible-test-framework).
 
 # Container
 
