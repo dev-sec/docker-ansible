@@ -5,8 +5,8 @@ MAINTAINER Sebastian Gumprich
 RUN yum makecache fast \
  && yum -y install deltarpm epel-release initscripts wget
 
-RUN wget http://mirror.de.leaseweb.net/epel/7/x86_64/e/epel-release-7-8.noarch.rpm
-RUN rpm -ihv epel-release-7-8.noarch.rpm
+RUN wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+RUN rpm -ihv epel-release-latest-7.noarch.rpm
 
 RUN yum -y update \
  && yum -y install \
