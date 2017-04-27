@@ -14,7 +14,6 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Debian 9][debian]     | 2.x             | [docker-debian9-ansible-latest][]     | [rndmh3ro/docker-debian9-ansible-latest][]    |
 | [Oracle 6][oracle]     | 2.x             | [docker-oracle6-ansible-latest][]     | [rndmh3ro/docker-oracle6-ansible-latest][]    |
 | [Oracle 7][oracle]     | 2.x             | [docker-oracle7-ansible-latest][]     | [rndmh3ro/docker-oracle7-ansible-latest][]    |
-| [Ubuntu 12.04][ubuntu] | 2.x             | [docker-ubuntu1204-ansible-latest][]  | [rndmh3ro/docker-ubuntu1204-ansible-latest][] |
 | [Ubuntu 14.04][ubuntu] | 2.x             | [docker-ubuntu1404-ansible-latest][]  | [rndmh3ro/docker-ubuntu1404-ansible-latest][] |
 | [Ubuntu 16.04][ubuntu] | 2.x             | [docker-ubuntu1604-ansible-latest][]  | [rndmh3ro/docker-ubuntu1604-ansible-latest][] |
 | [Alpine][alpine]       | 2.x             | [docker-alpine-ansible-latest][]      | [rndmh3ro/docker-alpine-ansible-latest][]     |
@@ -37,7 +36,6 @@ Sebastian Gumprich <sebastian.gumprich@38.de>
 [docker-debian9-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/debian9-ansible-latest/Dockerfile
 [docker-oracle6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/oracle6-ansible-latest/Dockerfile
 [docker-oracle7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/oracle7-ansible-latest/Dockerfile
-[docker-ubuntu1204-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1204-ansible-latest/Dockerfile
 [docker-ubuntu1404-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1404-ansible-latest/Dockerfile
 [docker-ubuntu1604-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1604-ansible-latest/Dockerfile
 [docker-alpine-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/alpine-ansible-latest/Dockerfile
@@ -49,7 +47,5 @@ Sebastian Gumprich <sebastian.gumprich@38.de>
 [rndmh3ro/docker-debian9-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-debian9-ansible
 [rndmh3ro/docker-oracle6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle6-ansible
 [rndmh3ro/docker-oracle7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle7-ansible
-[rndmh3ro/docker-ubuntu1204-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1204-ansible
-[rndmh3ro/docker-ubuntu1404-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1404-ansible
 [rndmh3ro/docker-ubuntu1604-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1604-ansible
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
