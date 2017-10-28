@@ -1,22 +1,21 @@
 FROM oraclelinux:7
 MAINTAINER Sebastian Gumprich
 
+# Add Oracle EPEL repo that contains Ansible
+RUN yum-config-manager --add-repo=http://yum.oracle.com/repo/OracleLinux/OL7/developer_EPEL/x86_64/
+
 # Install Ansible and other requirements.
 RUN yum makecache fast \
- && yum -y install deltarpm epel-release initscripts wget
-
-RUN wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-RUN rpm -ihv epel-release-latest-7.noarch.rpm
-
-RUN yum -y update \
- && yum -y install \
-      ansible \
+ && yum -y update \
+ && yum -y install --enablerepo=* \
       sudo \
       which \
+      ansible \
  && yum clean all
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN yum -y update; yum clean all; \
+rm -rf /var/cache/yum;\
 (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
 rm -f /lib/systemd/system/multi-user.target.wants/*;\
 rm -f /etc/systemd/system/*.wants/*;\
@@ -25,7 +24,6 @@ rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
 rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
-
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
