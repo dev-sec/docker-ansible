@@ -21,7 +21,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 
 # Author
 
-Sebastian Gumprich <sebastian.gumprich@38.de>
+Sebastian Gumprich <github@gumpri.ch>
 
 
 [centos]: https://hub.docker.com/_/centos/
