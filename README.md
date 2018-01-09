@@ -17,6 +17,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Ubuntu 14.04][ubuntu] | 2.x             | [docker-ubuntu1404-ansible-latest][]  | [rndmh3ro/docker-ubuntu1404-ansible-latest][] |
 | [Ubuntu 16.04][ubuntu] | 2.x             | [docker-ubuntu1604-ansible-latest][]  | [rndmh3ro/docker-ubuntu1604-ansible-latest][] |
 | [Alpine][alpine]       | 2.x             | [docker-alpine-ansible-latest][]      | [rndmh3ro/docker-alpine-ansible-latest][]     |
+| [Amazon Linux][amazon] | 2.x             | [docker-amazon-ansible-latest][]      | [rndmh3ro/docker-amazon-ansible-latest][]     |
 
 
 # Author
@@ -29,6 +30,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [oracle]: https://hub.docker.com/_/oraclelinux/
 [ubuntu]: https://hub.docker.com/_/ubuntu/
 [alpine]: https://hub.docker.com/_/alpine/
+[amazon]: https://hub.docker.com/_/amazonlinux/
 [docker-centos6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos6-ansible-latest/Dockerfile
 [docker-centos7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos7-ansible-latest/Dockerfile
 [docker-debian7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/debian7-ansible-latest/Dockerfile
@@ -39,6 +41,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-ubuntu1404-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1404-ansible-latest/Dockerfile
 [docker-ubuntu1604-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1604-ansible-latest/Dockerfile
 [docker-alpine-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/alpine-ansible-latest/Dockerfile
+[docker-amazon-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon-ansible-latest/Dockerfile
 
 [rndmh3ro/docker-centos6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos6-ansible
 [rndmh3ro/docker-centos7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos7-ansible
@@ -49,3 +52,4 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-oracle7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle7-ansible
 [rndmh3ro/docker-ubuntu1604-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1604-ansible
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
+[rndmh3ro/docker-amazon-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon-ansible
