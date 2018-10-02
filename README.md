@@ -50,6 +50,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-debian9-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-debian9-ansible
 [rndmh3ro/docker-oracle6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle6-ansible
 [rndmh3ro/docker-oracle7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle7-ansible
+[rndmh3ro/docker-ubuntu1404-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1404-ansible
 [rndmh3ro/docker-ubuntu1604-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1604-ansible
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
 [rndmh3ro/docker-amazon-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon-ansible
