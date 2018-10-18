@@ -20,8 +20,13 @@ RUN yum makecache fast && \
     yum -y install \
       ansible \
       sudo \
+      yamllint \
+      python2-pip \
       which && \
     yum clean all
+
+# Install ansible-lint
+RUN pip install ansible-lint
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
