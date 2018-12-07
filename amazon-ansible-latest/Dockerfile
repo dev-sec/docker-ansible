@@ -7,7 +7,7 @@ RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.r
 RUN yum makecache fast && \
     yum -y install deltarpm && \
     yum -y update && \
-    yum -y install ansible sysvinit initscripts --enablerepo=epel && \
+    yum -y install ansible sysvinit initscripts sudo --enablerepo=epel && \
     yum clean metadata && \
     yum clean all
 
