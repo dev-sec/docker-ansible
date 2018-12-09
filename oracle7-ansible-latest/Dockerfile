@@ -11,10 +11,9 @@ RUN yum makecache fast \
       sudo \
       which \
       ansible \
+      systemd \
  && yum clean all
 
-# Install systemd -- See https://hub.docker.com/_/centos/
-RUN yum -y update; yum clean all;
 RUN rm -rf /var/cache/yum;
 
 # Disable requiretty.
