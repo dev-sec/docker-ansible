@@ -26,7 +26,6 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 
 Sebastian Gumprich <github@gumpri.ch>
 
-
 [centos]: https://hub.docker.com/_/centos/
 [debian]: https://hub.docker.com/_/debian/
 [oracle]: https://hub.docker.com/_/oraclelinux/
