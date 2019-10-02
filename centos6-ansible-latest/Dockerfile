@@ -3,7 +3,9 @@ MAINTAINER Sebastian Gumprich
 
 # Install Ansible and other requirements.
 RUN yum makecache fast && \
-    yum -y install deltarpm epel-release initscripts && \
+    yum -y install deltarpm epel-release initscripts yum-utils && \
+    yum-config-manager --add-repo=https://releases.ansible.com/ansible/rpm/release/epel-6-x86_64/ && \
+    yum-config-manager --save --setopt=releases.ansible.com_ansible_rpm_release_epel-6-x86_64_.gpgkey=https://releases.ansible.com/keys/RPM-GPG-KEY-ansible-release.pub && \
     yum -y update && \
     yum -y install \
       ansible \
