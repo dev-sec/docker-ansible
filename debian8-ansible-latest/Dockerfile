@@ -8,8 +8,8 @@ RUN apt-get update -y  &&  apt-get install --fix-missing && \
       curl gcc python-pip python-dev libffi-dev libssl-dev && \
     apt-get -y --purge remove python-cffi
 
-RUN pip install --upgrade setuptools
-RUN pip install ansible
+RUN pip install --upgrade pip setuptools
+RUN pip install ansible wheel cryptography
 
 RUN apt-get -f -y --auto-remove remove \
       gcc python-pip python-dev libffi-dev libssl-dev && \
