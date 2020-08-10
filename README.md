@@ -16,9 +16,9 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Debian 10][debian]               | 2.x             | [docker-debian10-ansible-latest][]            | [rndmh3ro/docker-debian10-ansible-latest][]            |
 | [Oracle 6][oracle]                | 2.x             | [docker-oracle6-ansible-latest][]             | [rndmh3ro/docker-oracle6-ansible-latest][]             |
 | [Oracle 7][oracle]                | 2.x             | [docker-oracle7-ansible-latest][]             | [rndmh3ro/docker-oracle7-ansible-latest][]             |
-| [Ubuntu 14.04][ubuntu]            | 2.x             | [docker-ubuntu1404-ansible-latest][]          | [rndmh3ro/docker-ubuntu1404-ansible-latest][]          |
 | [Ubuntu 16.04][ubuntu]            | 2.x             | [docker-ubuntu1604-ansible-latest][]          | [rndmh3ro/docker-ubuntu1604-ansible-latest][]          |
 | [Ubuntu 18.04][ubuntu]            | 2.x             | [docker-ubuntu1804-ansible-latest][]          | [rndmh3ro/docker-ubuntu1804-ansible-latest][]          |
+| [Ubuntu 20.04][ubuntu]            | 2.x             | [docker-ubuntu2004-ansible-latest][]          | [rndmh3ro/docker-ubuntu2004-ansible-latest][]          |
 | [Alpine][alpine]                  | 2.x             | [docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
 | [Amazon Linux][amazon]            | 2.x             | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
 | [Fedora][fedora]                  | 2.x             | [docker-fedora-ansible-latest][]              | [rndmh3ro/docker-fedora-ansible-latest][]              |
@@ -46,9 +46,9 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-debian10-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/debian10-ansible-latest/Dockerfile
 [docker-oracle6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/oracle6-ansible-latest/Dockerfile
 [docker-oracle7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/oracle7-ansible-latest/Dockerfile
-[docker-ubuntu1404-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1404-ansible-latest/Dockerfile
 [docker-ubuntu1604-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1604-ansible-latest/Dockerfile
 [docker-ubuntu1804-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1804-ansible-latest/Dockerfile
+[docker-ubuntu2004-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu2004-ansible-latest/Dockerfile
 [docker-alpine-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/alpine-ansible-latest/Dockerfile
 [docker-amazon-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon-ansible-latest/Dockerfile
 [docker-fedora-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/fedora-ansible-latest/Dockerfile
@@ -63,9 +63,9 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-debian10-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-debian10-ansible
 [rndmh3ro/docker-oracle6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle6-ansible
 [rndmh3ro/docker-oracle7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle7-ansible
-[rndmh3ro/docker-ubuntu1404-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1404-ansible
 [rndmh3ro/docker-ubuntu1604-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1604-ansible
 [rndmh3ro/docker-ubuntu1804-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1804-ansible
+[rndmh3ro/docker-ubuntu2004-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu2004-ansible
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
 [rndmh3ro/docker-amazon-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon-ansible
 [rndmh3ro/docker-fedora-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-fedora-ansible
