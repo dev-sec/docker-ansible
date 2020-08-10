@@ -23,6 +23,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Amazon Linux][amazon]            | 2.x             | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
 | [Fedora][fedora]                  | 2.x             | [docker-fedora-ansible-latest][]              | [rndmh3ro/docker-fedora-ansible-latest][]              |
 | [OpenSuse Tumbleweed][tumbleweed] | 2.x             | [docker-opensuse_tumbleweed-ansible-latest][] | [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest][] |
+| [Arch Linux][arch]                | 2.x             | [docker-arch-ansible-latest][]                | [rndmh3ro/docker-arch-ansible-latest][]              |
 
 
 # Author
@@ -36,6 +37,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [alpine]: https://hub.docker.com/_/alpine/
 [amazon]: https://hub.docker.com/_/amazonlinux/
 [fedora]: https://hub.docker.com/_/fedora/
+[arch]: https://hub.docker.com/_/archlinux/
 [tumbleweed]: https://hub.docker.com/r/opensuse/tumbleweed
 [docker-centos6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos6-ansible-latest/Dockerfile
 [docker-centos7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos7-ansible-latest/Dockerfile
@@ -53,6 +55,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-amazon-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon-ansible-latest/Dockerfile
 [docker-fedora-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/fedora-ansible-latest/Dockerfile
 [docker-opensuse_tumbleweed-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/opensuse_tumbleweed-ansible-latest/Dockerfile
+[docker-arch-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/arch-ansible-latest/Dockerfile
 
 [rndmh3ro/docker-centos6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos6-ansible
 [rndmh3ro/docker-centos7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos7-ansible
@@ -70,3 +73,4 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-amazon-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon-ansible
 [rndmh3ro/docker-fedora-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-fedora-ansible
 [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest]: https://hub.docker.com/repository/docker/rndmh3ro/docker-opensuse_tumbleweed-ansible
+[rndmh3ro/docker-arch-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-arch-ansible
