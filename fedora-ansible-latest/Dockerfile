@@ -1,4 +1,4 @@
-FROM fedora/systemd-systemd:latest
+FROM fedora:latest
 LABEL maintainer="Sebastian Gumprich"
 
 RUN dnf -y update \
