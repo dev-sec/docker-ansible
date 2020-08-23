@@ -22,7 +22,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Fedora][fedora]                  | 2.x             | [docker-fedora-ansible-latest][]              | [rndmh3ro/docker-fedora-ansible-latest][]              |
 | [OpenSuse Tumbleweed][tumbleweed] | 2.x             | [docker-opensuse_tumbleweed-ansible-latest][] | [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest][] |
 | [Arch Linux][arch]                | 2.x             | [docker-arch-ansible-latest][]                | [rndmh3ro/docker-arch-ansible-latest][]              |
-
+| [OpenWRT][openwrt]                | 2.x             | [docker-openwrt-ansible-latest][]                | [rndmh3ro/docker-openwrt-ansible-latest][]              |
 
 # Author
 
@@ -37,6 +37,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [fedora]: https://hub.docker.com/_/fedora/
 [arch]: https://hub.docker.com/_/archlinux/
 [tumbleweed]: https://hub.docker.com/r/opensuse/tumbleweed
+[openwrt]: https://hub.docker.com/r/openwrtorg/rootfs
 [docker-centos6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos6-ansible-latest/Dockerfile
 [docker-centos7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos7-ansible-latest/Dockerfile
 [docker-centos8-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos8-ansible-latest/Dockerfile
@@ -52,7 +53,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-fedora-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/fedora-ansible-latest/Dockerfile
 [docker-opensuse_tumbleweed-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/opensuse_tumbleweed-ansible-latest/Dockerfile
 [docker-arch-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/arch-ansible-latest/Dockerfile
-
+[docker-openwrt-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/openwrt-ansible-latest/Dockerfile
 [rndmh3ro/docker-centos6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos6-ansible
 [rndmh3ro/docker-centos7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos7-ansible
 [rndmh3ro/docker-centos8-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos8-ansible
@@ -68,3 +69,4 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-fedora-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-fedora-ansible
 [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest]: https://hub.docker.com/repository/docker/rndmh3ro/docker-opensuse_tumbleweed-ansible
 [rndmh3ro/docker-arch-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-arch-ansible
+[rndmh3ro/docker-openwrt-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-openwrt-ansible
