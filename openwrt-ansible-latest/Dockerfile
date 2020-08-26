@@ -3,7 +3,7 @@ MAINTAINER Sebastian Gumprich
 
 RUN mkdir -p /var/lock && \
     opkg update && \
-    opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade && \
+    if [[ $(opkg list-upgradable) ]]; then opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade; fi && \
     opkg install python3 python3-pip python3-cryptography
 
 RUN pip3 install ansible
