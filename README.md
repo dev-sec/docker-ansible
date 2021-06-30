@@ -1,29 +1,29 @@
 # Summary
-These are Docker containers that include ansible latest stable 2.x version.
+These are Docker containers that include ansible latest stable Ansible version.
 
 They are meant for testing purposes and are mainly used for [dev-sec](https://github.com/dev-sec/) and the [ansible-test-framework](https://github.com/rndmh3ro/ansible-test-framework).
 
 # Container
 
-| Base operating system             | Ansible version | Github                                        | Docker Hub                                             |
-| --------------------------------- | --------------- | --------------------------------------------- |------------------------------------------------------- |
-| [CentOS 6][centos]                | 2.x             | [docker-centos6-ansible-latest][]             | [rndmh3ro/docker-centos6-ansible-latest][]             |
-| [CentOS 7][centos]                | 2.x             | [docker-centos7-ansible-latest][]             | [rndmh3ro/docker-centos7-ansible-latest][]             |
-| [CentOS 8][centos]                | 2.x             | [docker-centos8-ansible-latest][]             | [rndmh3ro/docker-centos8-ansible-latest][]             |
-| [Rocky Linux 8][centos]           | 2.x             | [docker-rocky8-ansible-latest][]              | [rndmh3ro/docker-rocky8-ansible-latest][]              |
-| [Debian 9][debian]                | 2.x             | [docker-debian9-ansible-latest][]             | [rndmh3ro/docker-debian9-ansible-latest][]             |
-| [Debian 10][debian]               | 2.x             | [docker-debian10-ansible-latest][]            | [rndmh3ro/docker-debian10-ansible-latest][]            |
-| [Oracle 6][oracle]                | 2.x             | [docker-oracle6-ansible-latest][]             | [rndmh3ro/docker-oracle6-ansible-latest][]             |
-| [Oracle 7][oracle]                | 2.x             | [docker-oracle7-ansible-latest][]             | [rndmh3ro/docker-oracle7-ansible-latest][]             |
-| [Ubuntu 16.04][ubuntu]            | 2.x             | [docker-ubuntu1604-ansible-latest][]          | [rndmh3ro/docker-ubuntu1604-ansible-latest][]          |
-| [Ubuntu 18.04][ubuntu]            | 2.x             | [docker-ubuntu1804-ansible-latest][]          | [rndmh3ro/docker-ubuntu1804-ansible-latest][]          |
-| [Ubuntu 20.04][ubuntu]            | 2.x             | [docker-ubuntu2004-ansible-latest][]          | [rndmh3ro/docker-ubuntu2004-ansible-latest][]          |
-| [Alpine][alpine]                  | 2.x             | [docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
-| [Amazon Linux][amazon]            | 2.x             | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
-| [Fedora][fedora]                  | 2.x             | [docker-fedora-ansible-latest][]              | [rndmh3ro/docker-fedora-ansible-latest][]              |
-| [OpenSuse Tumbleweed][tumbleweed] | 2.x             | [docker-opensuse_tumbleweed-ansible-latest][] | [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest][] |
-| [Arch Linux][arch]                | 2.x             | [docker-arch-ansible-latest][]                | [rndmh3ro/docker-arch-ansible-latest][]              |
-| [OpenWRT][openwrt]                | 2.x             | [docker-openwrt-ansible-latest][]                | [rndmh3ro/docker-openwrt-ansible-latest][]              |
+| Base operating system             | Github                                        | Docker Hub                                             |
+| --------------------------------- | --------------------------------------------- |------------------------------------------------------- |
+| [CentOS 6][centos]                | [docker-centos6-ansible-latest][]             | [rndmh3ro/docker-centos6-ansible-latest][]             |
+| [CentOS 7][centos]                | [docker-centos7-ansible-latest][]             | [rndmh3ro/docker-centos7-ansible-latest][]             |
+| [CentOS 8][centos]                | [docker-centos8-ansible-latest][]             | [rndmh3ro/docker-centos8-ansible-latest][]             |
+| [Rocky Linux 8][centos]           | [docker-rocky8-ansible-latest][]              | [rndmh3ro/docker-rocky8-ansible-latest][]              |
+| [Debian 9][debian]                | [docker-debian9-ansible-latest][]             | [rndmh3ro/docker-debian9-ansible-latest][]             |
+| [Debian 10][debian]               | [docker-debian10-ansible-latest][]            | [rndmh3ro/docker-debian10-ansible-latest][]            |
+| [Oracle 6][oracle]                | [docker-oracle6-ansible-latest][]             | [rndmh3ro/docker-oracle6-ansible-latest][]             |
+| [Oracle 7][oracle]                | [docker-oracle7-ansible-latest][]             | [rndmh3ro/docker-oracle7-ansible-latest][]             |
+| [Ubuntu 16.04][ubuntu]            | [docker-ubuntu1604-ansible-latest][]          | [rndmh3ro/docker-ubuntu1604-ansible-latest][]          |
+| [Ubuntu 18.04][ubuntu]            | [docker-ubuntu1804-ansible-latest][]          | [rndmh3ro/docker-ubuntu1804-ansible-latest][]          |
+| [Ubuntu 20.04][ubuntu]            | [docker-ubuntu2004-ansible-latest][]          | [rndmh3ro/docker-ubuntu2004-ansible-latest][]          |
+| [Alpine][alpine]                  | [docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
+| [Amazon Linux][amazon]            | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
+| [Fedora][fedora]                  | [docker-fedora-ansible-latest][]              | [rndmh3ro/docker-fedora-ansible-latest][]              |
+| [OpenSuse Tumbleweed][tumbleweed] | [docker-opensuse_tumbleweed-ansible-latest][] | [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest][] |
+| [Arch Linux][arch]                | [docker-arch-ansible-latest][]                | [rndmh3ro/docker-arch-ansible-latest][]                |
+| [OpenWRT][openwrt]                | [docker-openwrt-ansible-latest][]             | [rndmh3ro/docker-openwrt-ansible-latest][]             |
 
 # Author
 
