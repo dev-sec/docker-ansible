@@ -10,6 +10,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [CentOS 6][centos]                | 2.x             | [docker-centos6-ansible-latest][]             | [rndmh3ro/docker-centos6-ansible-latest][]             |
 | [CentOS 7][centos]                | 2.x             | [docker-centos7-ansible-latest][]             | [rndmh3ro/docker-centos7-ansible-latest][]             |
 | [CentOS 8][centos]                | 2.x             | [docker-centos8-ansible-latest][]             | [rndmh3ro/docker-centos8-ansible-latest][]             |
+| [Rocky Linux 8][centos]           | 2.x             | [docker-rocky8-ansible-latest][]              | [rndmh3ro/docker-rocky8-ansible-latest][]              |
 | [Debian 9][debian]                | 2.x             | [docker-debian9-ansible-latest][]             | [rndmh3ro/docker-debian9-ansible-latest][]             |
 | [Debian 10][debian]               | 2.x             | [docker-debian10-ansible-latest][]            | [rndmh3ro/docker-debian10-ansible-latest][]            |
 | [Oracle 6][oracle]                | 2.x             | [docker-oracle6-ansible-latest][]             | [rndmh3ro/docker-oracle6-ansible-latest][]             |
@@ -29,6 +30,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 Sebastian Gumprich <github@gumpri.ch>
 
 [centos]: https://hub.docker.com/_/centos/
+[rocky]: https://hub.docker.com/r/rockylinux/
 [debian]: https://hub.docker.com/_/debian/
 [oracle]: https://hub.docker.com/_/oraclelinux/
 [ubuntu]: https://hub.docker.com/_/ubuntu/
@@ -41,6 +43,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-centos6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos6-ansible-latest/Dockerfile
 [docker-centos7-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos7-ansible-latest/Dockerfile
 [docker-centos8-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/centos8-ansible-latest/Dockerfile
+[docker-rocky8-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/rocky8-ansible-latest/Dockerfile
 [docker-debian9-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/debian9-ansible-latest/Dockerfile
 [docker-debian10-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/debian10-ansible-latest/Dockerfile
 [docker-oracle6-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/oracle6-ansible-latest/Dockerfile
@@ -57,6 +60,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-centos6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos6-ansible
 [rndmh3ro/docker-centos7-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos7-ansible
 [rndmh3ro/docker-centos8-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-centos8-ansible
+[rndmh3ro/docker-rocky8-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-rocky8-ansible
 [rndmh3ro/docker-debian9-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-debian9-ansible
 [rndmh3ro/docker-debian10-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-debian10-ansible
 [rndmh3ro/docker-oracle6-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-oracle6-ansible
