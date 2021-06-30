@@ -1,4 +1,4 @@
-FROM archlinux/base:latest
+FROM archlinux:latest
 MAINTAINER Sebastian Gumprich
 
 # Update, install sudo and systemd, cleanup and remove unneeded unit files.
