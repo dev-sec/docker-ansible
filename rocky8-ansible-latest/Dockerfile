@@ -25,6 +25,9 @@ RUN yum makecache --timer \
       python3-pip \
  && yum clean all
 
+# Upgrade pip to latest version.
+RUN pip3 install --upgrade pip
+
 RUN pip3 install ansible
 
 # Disable requiretty.
