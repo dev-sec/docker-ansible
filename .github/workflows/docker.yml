@@ -47,7 +47,7 @@ jobs:
         name: Build and export to Docker
         uses: docker/build-push-action@v2
         with:
-          context: ${{ matrix.dockerimage }}
+          context: ${{ matrix.dockerimage }}-latest
           load: true
           tags: rndmh3ro/docker-${{ matrix.dockerimage }}:test
       -
