@@ -1,4 +1,4 @@
-name: ci
+name: build opensuse
 
 on:
   # yamllint disable-line rule:truthy
@@ -14,19 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - alpine-ansible
-          - amazon-ansible
-          - arch-ansible
-          - centos7-ansible
-          - centos8-ansible
-          - debian10-ansible
-          - debian9-ansible
-          - fedora-ansible
           - opensuse_tumbleweed-ansible
-          - openwrt-ansible
-          - oracle7-ansible
-          - ubuntu1804-ansible
-          - ubuntu2004-ansible
     steps:
       -
         name: Checkout
