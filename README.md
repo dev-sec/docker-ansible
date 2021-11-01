@@ -7,15 +7,12 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 
 | Base operating system             | Github                                        | Docker Hub                                             |
 | --------------------------------- | --------------------------------------------- |------------------------------------------------------- |
-| [CentOS 6][centos]                | [docker-centos6-ansible-latest][]             | [rndmh3ro/docker-centos6-ansible-latest][]             |
 | [CentOS 7][centos]                | [docker-centos7-ansible-latest][]             | [rndmh3ro/docker-centos7-ansible-latest][]             |
 | [CentOS 8][centos]                | [docker-centos8-ansible-latest][]             | [rndmh3ro/docker-centos8-ansible-latest][]             |
 | [Rocky Linux 8][centos]           | [docker-rocky8-ansible-latest][]              | [rndmh3ro/docker-rocky8-ansible-latest][]              |
 | [Debian 9][debian]                | [docker-debian9-ansible-latest][]             | [rndmh3ro/docker-debian9-ansible-latest][]             |
 | [Debian 10][debian]               | [docker-debian10-ansible-latest][]            | [rndmh3ro/docker-debian10-ansible-latest][]            |
-| [Oracle 6][oracle]                | [docker-oracle6-ansible-latest][]             | [rndmh3ro/docker-oracle6-ansible-latest][]             |
 | [Oracle 7][oracle]                | [docker-oracle7-ansible-latest][]             | [rndmh3ro/docker-oracle7-ansible-latest][]             |
-| [Ubuntu 16.04][ubuntu]            | [docker-ubuntu1604-ansible-latest][]          | [rndmh3ro/docker-ubuntu1604-ansible-latest][]          |
 | [Ubuntu 18.04][ubuntu]            | [docker-ubuntu1804-ansible-latest][]          | [rndmh3ro/docker-ubuntu1804-ansible-latest][]          |
 | [Ubuntu 20.04][ubuntu]            | [docker-ubuntu2004-ansible-latest][]          | [rndmh3ro/docker-ubuntu2004-ansible-latest][]          |
 | [Alpine][alpine]                  | [docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
