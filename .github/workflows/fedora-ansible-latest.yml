@@ -1,13 +1,12 @@
-name: fedora-ansible-latest
+name: build fedora
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'fedora-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'fedora-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

@@ -1,13 +1,12 @@
-name: rocky8-ansible-latest
+name: build rocky8
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'rocky8-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'rocky8-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

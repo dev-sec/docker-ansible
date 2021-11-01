@@ -1,13 +1,12 @@
-name: ubuntu1804-ansible-latest
+name: build ubuntu1804
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'ubuntu1804-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'ubuntu1804-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

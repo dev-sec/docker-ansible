@@ -1,13 +1,12 @@
-name: amazon-ansible-latest
+name: build amazon linux
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'amazon-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'amazon-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

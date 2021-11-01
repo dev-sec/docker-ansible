@@ -1,13 +1,12 @@
-name: alpine-ansible-latest
+name: build alpine
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'alpine-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'alpine-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

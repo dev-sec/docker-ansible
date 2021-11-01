@@ -1,13 +1,12 @@
-name: opensuse_tumbleweed-ansible-latest
+name: build opensuse
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'opensuse_tumbleweed-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'opensuse_tumbleweed-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

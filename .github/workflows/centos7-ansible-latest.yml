@@ -1,13 +1,12 @@
-name: centos7-ansible-latest
+name: build centos7
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'centos7-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'centos7-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]

@@ -1,13 +1,12 @@
-name: centos8-ansible-latest
+name: build centos8
+
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-    push:
-      paths:
-        - 'centos8-ansible-latest/**'
-    pull_request:
-      paths:
-        - 'centos8-ansible-latest/**'
+  push:
+    branches:
+      - 'master'
+
 jobs:
   docker:
     runs-on: [self-hosted]
