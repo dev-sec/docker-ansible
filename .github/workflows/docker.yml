@@ -1,0 +1,61 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        dockerimage:
+          - alpine-ansible-latest
+          - amazon-ansible-latest
+          - arch-ansible-latest
+          - centos7-ansible-latest
+          - centos8-ansible-latest
+          - debian10-ansible-latest
+          - debian9-ansible-latest
+          - fedora-ansible-latest
+          - opensuse_tumbleweed-ansible-latest
+          - openwrt-ansible-latest
+          - oracle7-ansible-latest
+          - ubuntu1804-ansible-latest
+          - ubuntu2004-ansible-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Build and export to Docker
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{ matrix.dockerimage }}
+          load: true
+          tags: rndmh3ro/docker-${{ matrix.dockerimage }}:test
+      -
+        name: Test
+        run: |
+          docker run --rm rndmh3ro/docker-${{ matrix.dockerimage }}:test
+      -
+        name: Build and push
+        uses: docker/build-push-action@v2
+        with:
+          context: ${{ matrix.dockerimage }}
+          push: true
+          tags: rndmh3ro/docker-${{ matrix.dockerimage }}:latest
