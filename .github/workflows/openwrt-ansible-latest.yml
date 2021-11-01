@@ -1,12 +1,13 @@
-name: build openwrt
-
+name: openwrt-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-  push:
-    branches:
-      - 'master'
-
+    push:
+      paths:
+        - 'openwrt-ansible-latest/**'
+    pull_request:
+      paths:
+        - 'openwrt-ansible-latest/**'
 jobs:
   docker:
     runs-on: [self-hosted]

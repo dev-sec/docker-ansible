@@ -1,12 +1,13 @@
-name: build debian9
-
+name: debian9-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-  push:
-    branches:
-      - 'master'
-
+    push:
+      paths:
+        - 'debian9-ansible-latest/**'
+    pull_request:
+      paths:
+        - 'debian9-ansible-latest/**'
 jobs:
   docker:
     runs-on: [self-hosted]
