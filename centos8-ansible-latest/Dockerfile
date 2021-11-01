@@ -25,6 +25,7 @@ RUN yum makecache --timer \
       python3-pip \
  && yum clean all
 
+# upgrade pip because of the rust dependency error
 RUN python3 -m pip install --upgrade pip
 RUN pip3 install ansible
 
