@@ -7,24 +7,24 @@ on:
 
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu
     strategy:
       fail-fast: false
       matrix:
         dockerimage:
-          - alpine-ansible-latest
-          - amazon-ansible-latest
-          - arch-ansible-latest
-          - centos7-ansible-latest
-          - centos8-ansible-latest
-          - debian10-ansible-latest
-          - debian9-ansible-latest
-          - fedora-ansible-latest
-          - opensuse_tumbleweed-ansible-latest
-          - openwrt-ansible-latest
-          - oracle7-ansible-latest
-          - ubuntu1804-ansible-latest
-          - ubuntu2004-ansible-latest
+          - alpine-ansible
+          - amazon-ansible
+          - arch-ansible
+          - centos7-ansible
+          - centos8-ansible
+          - debian10-ansible
+          - debian9-ansible
+          - fedora-ansible
+          - opensuse_tumbleweed-ansible
+          - openwrt-ansible
+          - oracle7-ansible
+          - ubuntu1804-ansible
+          - ubuntu2004-ansible
     steps:
       -
         name: Checkout
@@ -56,6 +56,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ${{ matrix.dockerimage }}
+          context: ${{ matrix.dockerimage }}-latest
           push: true
           tags: rndmh3ro/docker-${{ matrix.dockerimage }}:latest
