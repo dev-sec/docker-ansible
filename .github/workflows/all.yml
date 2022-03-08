@@ -8,7 +8,7 @@ on:
 
 jobs:
   docker:
-    runs-on: [self-hosted]
+    runs-on: ubuntu
     strategy:
       fail-fast: false
       matrix:
