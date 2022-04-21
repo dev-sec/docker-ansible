@@ -69,5 +69,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}
+          repository: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}
           short-description: ${{ github.event.repository.description }}
