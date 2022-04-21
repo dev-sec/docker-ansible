@@ -19,6 +19,7 @@ jobs:
           - centos7-ansible
           - centos8-ansible
           - rocky8-ansible
+          - debian11-ansible
           - debian10-ansible
           - debian9-ansible
           - fedora-ansible
