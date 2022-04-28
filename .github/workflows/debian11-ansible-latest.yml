@@ -1,13 +1,13 @@
-name: arch-ansible-latest
+name: debian11-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
     paths:
-      - 'arch-ansible-latest/**'
+      - 'debian11-ansible-latest/**'
   pull_request:
     paths:
-      - 'arch-ansible-latest/**'
+      - 'debian11-ansible-latest/**'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - arch-ansible
+          - debian11-ansible
     steps:
       -
         name: Checkout

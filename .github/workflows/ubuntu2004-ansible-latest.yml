@@ -38,15 +38,15 @@ jobs:
         with:
           context: ${{ matrix.dockerimage }}-latest
           load: true
-          tags: rndmh3ro/docker-${{ matrix.dockerimage }}:test
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
       -
         name: Test
         run: |
-          docker run --rm rndmh3ro/docker-${{ matrix.dockerimage }}:test
+          docker run --rm ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
       -
         name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: ${{ matrix.dockerimage }}-latest
           push: true
-          tags: rndmh3ro/docker-${{ matrix.dockerimage }}:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:latest
