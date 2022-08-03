@@ -21,7 +21,7 @@ RUN apt-get update \
   && apt-get clean
 
 # Install Ansible inventory file
-RUN mkdir /etc/ansible
+RUN mkdir /etc/ansible \
   && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
 CMD [ "ansible-playbook", "--version" ]
