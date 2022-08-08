@@ -69,6 +69,6 @@ jobs:
         if: github.repository == 'rndmh3ro/docker-ansible'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
           repository: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}
           short-description: ${{ github.event.repository.description }}
