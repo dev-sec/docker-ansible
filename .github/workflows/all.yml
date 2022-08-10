@@ -28,6 +28,7 @@ jobs:
           - oracle7-ansible
           - ubuntu1804-ansible
           - ubuntu2004-ansible
+          - ubuntu2204-ansible
 
     steps:
       -
