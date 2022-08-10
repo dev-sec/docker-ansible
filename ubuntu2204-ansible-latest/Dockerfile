@@ -28,7 +28,7 @@ RUN mkdir /etc/ansible \
 # Create `ansible` user with sudo permissions and membership in `DEPLOY_GROUP`
 # This template gets rendered using `loop: "{{ molecule_yml.platforms }}"`, so
 # each `item` is an element of platforms list from the molecule.yml file for this scenario.
-ENV ANSIBLE_USER=ansible DEPLOY_GROUP=deployer SUDO_GROUP=wheel
+ENV ANSIBLE_USER=ansible DEPLOY_GROUP=deployer SUDO_GROUP=sudo
 RUN set -xe \
   && groupadd -r ${ANSIBLE_USER} \
   && groupadd -r ${DEPLOY_GROUP} \
