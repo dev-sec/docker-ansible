@@ -14,7 +14,8 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 # Install Ansible and other requirements.
-RUN yum makecache --timer \
+RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g" /etc/yum.repos.d/CentOS-Linux-* \
+ && yum makecache --timer \
  && yum -y install epel-release initscripts \
  && yum -y update \
  && yum -y install \
