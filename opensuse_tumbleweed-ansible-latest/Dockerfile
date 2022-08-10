@@ -2,7 +2,7 @@ FROM opensuse/tumbleweed:latest
 MAINTAINER Sebastian Gumprich
 ENV container=docker
 
-RUN zypper install -y python ansible dbus-1 systemd-sysvinit shadow
+RUN zypper install -y python ansible dbus-1 systemd-sysvinit shadow sudo
 
 RUN cp /usr/lib/systemd/system/dbus.service /etc/systemd/system/; \
     sed -i 's/OOMScoreAdjust=-900//' /etc/systemd/system/dbus.service
@@ -22,7 +22,7 @@ RUN set -xe \
   && useradd -m -g ${ANSIBLE_USER} ${ANSIBLE_USER} \
   && usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} \
   && usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} \
-  && sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
+  && sed -i "s/^# \(%${SUDO_GROUP} ALL=(ALL:ALL) NOPASSWD: ALL\)/\\1/g" /etc/sudoers
 
 VOLUME ["/sys/fs/cgroup", "/run"]
 CMD [ "ansible-playbook", "--version" ]
