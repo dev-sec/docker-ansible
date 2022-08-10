@@ -45,6 +45,6 @@ RUN set -xe \
   && useradd -m -g ${ANSIBLE_USER} ${ANSIBLE_USER} \
   && usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} \
   && usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} \
-  && sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
-  
+  && sed -i "s/^# \(%${SUDO_GROUP} ALL=(ALL:ALL) NOPASSWD: ALL\)/\\1/g" /etc/sudoers
+
 CMD [ "ansible-playbook", "--version" ]
