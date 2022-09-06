@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - centos9-ansible
+          - centosstream9-ansible
     steps:
       -
         name: Checkout
