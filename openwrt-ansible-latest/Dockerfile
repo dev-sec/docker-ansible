@@ -7,6 +7,7 @@ RUN mkdir -p /var/lock && \
     opkg install python3 python3-pip python3-cryptography \
     sudo bash sed shadow-su shadow-groupadd shadow-useradd shadow-usermod
 
+RUN pip3 install --upgrade pip
 RUN pip3 install ansible
 
 # Install Ansible inventory file
