@@ -1,4 +1,4 @@
-FROM amazonlinux
+FROM amazonlinux:2
 MAINTAINER Sebastian Gumprich
 
 # Install Ansible and other requirements.

@@ -21,6 +21,8 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Ubuntu 22.04][ubuntu]            | [docker-ubuntu2204-ansible-latest][]          | [rndmh3ro/docker-ubuntu2204-ansible-latest][]          |
 | [Alpine][alpine]                  | [docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
 | [Amazon Linux][amazon]            | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
+| [Amazon Linux 2][amazon]          | [docker-amazon2-ansible-latest][]             | [rndmh3ro/docker-amazon2-ansible-latest][]             |
+| [Amazon Linux 2023][amazon]       | [docker-amazon2023-ansible-latest][]          | [rndmh3ro/docker-amazon2023-ansible-latest][]          |
 | [Fedora][fedora]                  | [docker-fedora-ansible-latest][]              | [rndmh3ro/docker-fedora-ansible-latest][]              |
 | [OpenSuse Tumbleweed][tumbleweed] | [docker-opensuse_tumbleweed-ansible-latest][] | [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest][] |
 | [Arch Linux][arch]                | [docker-arch-ansible-latest][]                | [rndmh3ro/docker-arch-ansible-latest][]                |
@@ -56,7 +58,8 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-ubuntu2004-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu2004-ansible-latest/Dockerfile
 [docker-ubuntu2204-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu2204-ansible-latest/Dockerfile
 [docker-alpine-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/alpine-ansible-latest/Dockerfile
-[docker-amazon-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon-ansible-latest/Dockerfile
+[docker-amazon2-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon2-ansible-latest/Dockerfile
+[docker-amazon2023-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon2023-ansible-latest/Dockerfile
 [docker-fedora-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/fedora-ansible-latest/Dockerfile
 [docker-opensuse_tumbleweed-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/opensuse_tumbleweed-ansible-latest/Dockerfile
 [docker-arch-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/arch-ansible-latest/Dockerfile
@@ -77,7 +80,8 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-ubuntu2004-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu2004-ansible
 [rndmh3ro/docker-ubuntu2204-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu2204-ansible
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
-[rndmh3ro/docker-amazon-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon-ansible
+[rndmh3ro/docker-amazon2-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon2-ansible
+[rndmh3ro/docker-amazon2023-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon2023-ansible
 [rndmh3ro/docker-fedora-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-fedora-ansible
 [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest]: https://hub.docker.com/repository/docker/rndmh3ro/docker-opensuse_tumbleweed-ansible
 [rndmh3ro/docker-arch-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-arch-ansible
