@@ -28,6 +28,12 @@ RUN yum makecache fast && \
       which && \
     yum clean all
 
+# update Systemd for cgroups v2 support
+RUN yum -y install yum-plugin-copr libseccomp && \
+    yum -y copr enable jsynacek/systemd-backports-for-centos-7 && \
+    yum -y update systemd && \
+    yum clean all
+
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
