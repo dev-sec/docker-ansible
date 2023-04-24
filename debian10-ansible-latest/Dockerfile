@@ -31,4 +31,7 @@ RUN set -xe \
   && usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} \
   && sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
 
+# Make sure systemd doesn't start agettys on tty[1-6].
+RUN rm -f /lib/systemd/system/multi-user.target.wants/getty.target
+
 CMD [ "ansible-playbook", "--version" ]
