@@ -22,7 +22,6 @@ jobs:
           - rocky8-ansible
           - debian11-ansible
           - debian10-ansible
-          - debian9-ansible
           - fedora-ansible
           - opensuse_tumbleweed-ansible
           - openwrt-ansible
