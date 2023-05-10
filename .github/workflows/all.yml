@@ -50,6 +50,7 @@ jobs:
           context: ${{ matrix.dockerimage }}-latest
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
           platforms: ${{ matrix.platforms }}
+          load: true
       -
         name: Test
         run: |
