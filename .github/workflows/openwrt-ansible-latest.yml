@@ -16,6 +16,9 @@ jobs:
       matrix:
         dockerimage:
           - openwrt-ansible
+        platforms:
+          - linux/amd64
+          - linux/arm64
     steps:
       -
         name: Checkout
@@ -32,7 +35,7 @@ jobs:
         with:
           context: ${{ matrix.dockerimage }}-latest
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
-          platforms: linux/amd64,linux/arm64
+          platforms: ${{ matrix.platforms }}
       -
         name: Test
         run: |
@@ -51,5 +54,5 @@ jobs:
           context: ${{ matrix.dockerimage }}-latest
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:latest
-          platforms: linux/amd64,linux/arm64
+          platforms: ${{ matrix.platforms }}
         if: github.ref == 'refs/heads/master'
