@@ -47,7 +47,7 @@ jobs:
           context: ${{ matrix.dockerimage }}-latest
           load: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
-          platform: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64
       -
         name: Test
         run: |
@@ -66,7 +66,7 @@ jobs:
           context: ${{ matrix.dockerimage }}-latest
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:latest
-          platform: linux/amd64,linux/arm64
+          platforms: linux/amd64,linux/arm64
         if: github.ref == 'refs/heads/master'
       -
         name: Update repo description
