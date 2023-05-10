@@ -1,4 +1,4 @@
-FROM openwrtorg/rootfs:latest
+FROM openwrt/rootfs:latest
 MAINTAINER Sebastian Gumprich
 
 RUN mkdir -p /var/lock && \
