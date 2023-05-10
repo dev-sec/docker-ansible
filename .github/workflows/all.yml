@@ -32,6 +32,13 @@ jobs:
         platforms:
           - linux/amd64
           - linux/arm64
+        exclude:
+          - dockerimage: oracle7-ansible
+            platforms: linux/arm64
+          - dockerimage: arch-ansible
+            platforms: linux/arm64
+          - dockerimage: centos7-ansible
+            platforms: linux/arm64
 
     steps:
       -
