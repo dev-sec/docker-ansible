@@ -18,7 +18,7 @@ jobs:
           - centos8-ansible
         platforms:
           - linux/amd64
-          - linux/arm64
+          #- linux/arm64
     steps:
       -
         name: Checkout

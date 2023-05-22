@@ -31,7 +31,7 @@ jobs:
           - ubuntu2204-ansible
         platforms:
           - linux/amd64
-          - linux/arm64
+            # #- linux/arm64
         exclude:
           - dockerimage: oracle7-ansible
             platforms: linux/arm64

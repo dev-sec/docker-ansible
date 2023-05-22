@@ -18,7 +18,7 @@ jobs:
           - alpine-ansible
         platforms:
           - linux/amd64
-          - linux/arm64
+          #- linux/arm64
     steps:
       -
         name: Checkout
