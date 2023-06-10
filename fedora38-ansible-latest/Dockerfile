@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:38
 LABEL maintainer="Sebastian Gumprich"
 
 # Enable systemd.
