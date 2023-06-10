@@ -22,6 +22,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Amazon Linux][amazon]            | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
 | [Amazon Linux 2][amazon]          | [docker-amazon2-ansible-latest][]             | [rndmh3ro/docker-amazon2-ansible-latest][]             |
 | [Amazon Linux 2023][amazon]       | [docker-amazon2023-ansible-latest][]          | [rndmh3ro/docker-amazon2023-ansible-latest][]          |
+| [Fedora 37][fedora]               | [docker-fedora37-ansible-latest][]            | [rndmh3ro/docker-fedora37-ansible-latest][]            |
 | [Fedora 38][fedora]               | [docker-fedora38-ansible-latest][]            | [rndmh3ro/docker-fedora38-ansible-latest][]            |
 | [OpenSuse Tumbleweed][tumbleweed] | [docker-opensuse_tumbleweed-ansible-latest][] | [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest][] |
 | [Arch Linux][arch]                | [docker-arch-ansible-latest][]                | [rndmh3ro/docker-arch-ansible-latest][]                |
@@ -58,6 +59,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-alpine-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/alpine-ansible-latest/Dockerfile
 [docker-amazon2-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon2-ansible-latest/Dockerfile
 [docker-amazon2023-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon2023-ansible-latest/Dockerfile
+[docker-fedora37-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/fedora37-ansible-latest/Dockerfile
 [docker-fedora38-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/fedora38-ansible-latest/Dockerfile
 [docker-opensuse_tumbleweed-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/opensuse_tumbleweed-ansible-latest/Dockerfile
 [docker-arch-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/arch-ansible-latest/Dockerfile
@@ -79,6 +81,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
 [rndmh3ro/docker-amazon2-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon2-ansible
 [rndmh3ro/docker-amazon2023-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon2023-ansible
+[rndmh3ro/docker-fedora37-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-fedora37-ansible
 [rndmh3ro/docker-fedora38-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-fedora38-ansible
 [rndmh3ro/docker-opensuse_tumbleweed-ansible-latest]: https://hub.docker.com/repository/docker/rndmh3ro/docker-opensuse_tumbleweed-ansible
 [rndmh3ro/docker-arch-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-arch-ansible
