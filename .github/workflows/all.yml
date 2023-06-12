@@ -22,7 +22,8 @@ jobs:
           - rocky8-ansible
           - debian11-ansible
           - debian10-ansible
-          - fedora-ansible
+          - fedora37-ansible
+          - fedora38-ansible
           - opensuse_tumbleweed-ansible
           - openwrt-ansible
           - oracle7-ansible
@@ -55,13 +56,13 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ${{ matrix.dockerimage }}-latest
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
+          tags: docker-${{ matrix.dockerimage }}:test
           platforms: ${{ matrix.platforms }}
           load: true
       -
         name: Test
         run: |
-          docker run --rm ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
+          docker run --rm docker-${{ matrix.dockerimage }}:test
       -
         name: Login to DockerHub
         uses: docker/login-action@v1

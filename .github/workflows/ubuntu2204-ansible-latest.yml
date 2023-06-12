@@ -34,13 +34,13 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ${{ matrix.dockerimage }}-latest
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
+          tags: docker-${{ matrix.dockerimage }}:test
           load: true
           platforms: ${{ matrix.platforms }}
       -
         name: Test
         run: |
-          docker run --rm ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
+          docker run --rm docker-${{ matrix.dockerimage }}:test
       -
         name: Login to DockerHub
         uses: docker/login-action@v1

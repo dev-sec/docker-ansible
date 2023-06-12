@@ -1,5 +1,5 @@
-FROM fedora:latest
-LABEL maintainer="Sebastian Gumprich"
+FROM fedora:37
+LABEL maintainer="Sebastian Gumprich; Nejc Habjan; Diego Louzan; Max Wittig"
 
 # Enable systemd.
 RUN dnf -y install systemd && dnf clean all && \

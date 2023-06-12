@@ -1,13 +1,13 @@
-name: fedora-ansible-latest
+name: fedora37-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
     paths:
-      - 'fedora-ansible-latest/**'
+      - 'fedora37-ansible-latest/**'
   pull_request:
     paths:
-      - 'fedora-ansible-latest/**'
+      - 'fedora37-ansible-latest/**'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - fedora-ansible
+          - fedora37-ansible
         platforms:
           - linux/amd64
           #- linux/arm64
@@ -34,13 +34,13 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ${{ matrix.dockerimage }}-latest
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
+          tags: docker-${{ matrix.dockerimage }}:test
           platforms: ${{ matrix.platforms }}
           load: true
       -
         name: Test
         run: |
-          docker run --rm ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:test
+          docker run --rm docker-${{ matrix.dockerimage }}:test
       -
         name: Login to DockerHub
         uses: docker/login-action@v1
