@@ -19,7 +19,6 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Ubuntu 20.04][ubuntu]            | [docker-ubuntu2004-ansible-latest][]          | [rndmh3ro/docker-ubuntu2004-ansible-latest][]          |
 | [Ubuntu 22.04][ubuntu]            | [docker-ubuntu2204-ansible-latest][]          | [rndmh3ro/docker-ubuntu2204-ansible-latest][]          |
 | [Alpine][alpine]                  | [docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
-| [Amazon Linux][amazon]            | [docker-amazon-ansible-latest][]              | [rndmh3ro/docker-amazon-ansible-latest][]              |
 | [Amazon Linux 2][amazon]          | [docker-amazon2-ansible-latest][]             | [rndmh3ro/docker-amazon2-ansible-latest][]             |
 | [Amazon Linux 2023][amazon]       | [docker-amazon2023-ansible-latest][]          | [rndmh3ro/docker-amazon2023-ansible-latest][]          |
 | [Fedora 37][fedora]               | [docker-fedora37-ansible-latest][]            | [rndmh3ro/docker-fedora37-ansible-latest][]            |
