@@ -81,7 +81,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
       -
         name: Update repo description
-        uses: peter-evans/dockerhub-description@v2
+        uses: peter-evans/dockerhub-description@v3
         if: github.repository == 'rndmh3ro/docker-ansible' && github.ref == 'refs/heads/master'
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
