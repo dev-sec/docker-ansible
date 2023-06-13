@@ -11,6 +11,9 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     strategy:
       fail-fast: false
       matrix:
@@ -41,6 +44,23 @@ jobs:
         name: Test
         run: |
           docker run --rm docker-${{ matrix.dockerimage }}:test
+      -
+        name: Login to ghcr.io
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+        if: github.ref == 'refs/heads/master'
+      -
+        name: Build and push to ghcr.io
+        uses: docker/build-push-action@v4
+        with:
+          context: ${{ matrix.dockerimage }}-latest
+          push: true
+          tags: ghcr.io/dev-sec/docker-${{ matrix.dockerimage }}:latest
+          platforms: ${{ matrix.platforms }}
+        if: github.ref == 'refs/heads/master'
       -
         name: Login to DockerHub
         uses: docker/login-action@v2
