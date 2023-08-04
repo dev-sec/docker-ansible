@@ -22,7 +22,10 @@ jobs:
           - arch-ansible
           - centos7-ansible
           - centos8-ansible
+          - centosstream8-ansible
+          - centosstream9-ansible
           - rocky8-ansible
+          - rocky9-ansible
           - debian10-ansible
           - debian11-ansible
           - debian12-ansible
