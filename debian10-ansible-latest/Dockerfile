@@ -34,4 +34,7 @@ RUN set -xe \
 # Make sure systemd doesn't start agettys on tty[1-6].
 RUN rm -f /lib/systemd/system/multi-user.target.wants/getty.target
 
+# delete file created by systemd that prevents login via ssh
+RUN rm -f /{var/run,etc,run}/nologin
+
 CMD [ "ansible-playbook", "--version" ]

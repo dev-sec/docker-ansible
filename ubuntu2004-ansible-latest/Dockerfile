@@ -36,4 +36,7 @@ RUN set -xe \
   && usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} \
   && sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
 
+# delete file created by systemd that prevents login via ssh
+RUN rm -f /{var/run,etc,run}/nologin
+
 CMD [ "ansible-playbook", "--version" ]

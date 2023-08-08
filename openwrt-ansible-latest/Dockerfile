@@ -31,4 +31,7 @@ RUN set -xe \
 RUN opkg remove --autoremove \
     python3-pip shadow-groupadd shadow-useradd shadow-usermod sed
 
+# delete file created by systemd that prevents login via ssh
+RUN rm -f /{var/run,etc,run}/nologin
+
 CMD [ "ansible-playbook", "--version" ]
