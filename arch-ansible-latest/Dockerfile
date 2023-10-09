@@ -29,7 +29,8 @@ RUN pacman -S -y \
   && yes | pacman -Scc || true
 
 # Install Ansible inventory file.
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN mkdir /etc/ansible \
+  && echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
 # Switch default target from graphical to multi-user.
 RUN systemctl set-default multi-user.target
