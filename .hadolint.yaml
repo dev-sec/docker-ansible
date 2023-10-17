@@ -6,3 +6,5 @@ ignored:
   - DL3033 # we don't want to pin versions
   - DL3041 # we don't want to pin versions
   - DL3037 # we don't want to pin versions
+  - SC3009 # we don't care aboint POSIX compatibility
+  - SC3037 # we don't care aboint POSIX compatibility
