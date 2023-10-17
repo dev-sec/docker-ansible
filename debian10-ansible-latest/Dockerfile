@@ -1,12 +1,15 @@
 FROM debian:buster
 LABEL maintainer="Sebastian Gumprich"
 
-RUN apt-get update -y  &&  apt-get install --fix-missing && \
+RUN apt-get update -y  &&  apt-get install -y --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y \
       python python-yaml sudo \
-      curl gcc python-pip python-dev libffi-dev libssl-dev systemd
-RUN pip install  --no-cache-dir --upgrade cffi && \
+      curl gcc python-pip python-dev libffi-dev libssl-dev systemd && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir --upgrade cffi && \
     pip install --no-cache-dir ansible
 
 RUN apt-get -f -y --auto-remove remove \

@@ -5,7 +5,10 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends --fix-missin
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends \
       python3 python3-yaml sudo \
-      curl gcc python3-pip python3-dev libffi-dev libssl-dev systemd
+      curl gcc python3-pip python3-dev libffi-dev libssl-dev systemd && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN pip install --no-cache-dir --upgrade cffi && \
     pip install --no-cache-dir ansible
 
