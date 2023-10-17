@@ -38,7 +38,7 @@ RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Upgrade pip so cryptography package works.
 RUN python3 -m pip install --no-cache-dir --upgrade pip && \
-    pip3 install ansible
+    pip3 install --no-cache-dir ansible
 
 # https://molecule.readthedocs.io/en/latest/examples.html#docker-with-non-privileged-user
 # Create `ansible` user with sudo permissions and membership in `DEPLOY_GROUP`

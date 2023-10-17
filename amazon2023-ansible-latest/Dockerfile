@@ -13,7 +13,7 @@ RUN yum makecache --timer && \
       python3-pip && \
     yum clean all
 
-RUN pip3 install ansible
+RUN pip3 install --no-cache-dir ansible
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
