@@ -1,0 +1,3 @@
+ignored:
+  - DL3007 # we don't want to pin versions
+  - DL3018 # we don't want to pin versions
