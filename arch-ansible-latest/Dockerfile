@@ -7,7 +7,7 @@ RUN  pacman -S -y \
     sudo \
     systemd \
   && \
-  (for i in /lib/systemd/system/sysinit.target.wants/*; do [ $i == systemd-tmpfiles-setup.service ] || rm -vf $i; done) \
+  for i in /lib/systemd/system/sysinit.target.wants/*; do [ $i == systemd-tmpfiles-setup.service ] || rm -vf $i; done; \
   rm -vf /lib/systemd/system/multi-user.target.wants/*; \
   rm -vf /etc/systemd/system/*.wants/*; \
   rm -vf /lib/systemd/system/local-fs.target.wants/*; \
