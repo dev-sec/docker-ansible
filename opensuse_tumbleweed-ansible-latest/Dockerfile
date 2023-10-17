@@ -1,5 +1,5 @@
 FROM opensuse/tumbleweed:latest
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 ENV container=docker
 
 RUN zypper install -y python ansible dbus-1 systemd-sysvinit shadow sudo
@@ -8,8 +8,8 @@ RUN cp /usr/lib/systemd/system/dbus.service /etc/systemd/system/; \
     sed -i 's/OOMScoreAdjust=-900//' /etc/systemd/system/dbus.service
 
 # Install Ansible inventory file.
-RUN mkdir -p /etc/ansible
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 # https://molecule.readthedocs.io/en/latest/examples.html#docker-with-non-privileged-user
 # Create `ansible` user with sudo permissions and membership in `DEPLOY_GROUP`

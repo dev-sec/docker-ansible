@@ -1,5 +1,5 @@
 FROM rockylinux/rockylinux:8
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 ENV container=docker
 
 # Install systemd -- See https://hub.docker.com/_/centos/
@@ -26,16 +26,15 @@ RUN yum makecache --timer \
  && yum clean all
 
 # upgrade pip because of the rust dependency error
-RUN pip3 install --upgrade pip
-
-RUN pip3 install ansible
+RUN pip3 install --upgrade pip && \
+    pip3 install ansible
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Install Ansible inventory file.
-RUN mkdir -p /etc/ansible
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 # https://molecule.readthedocs.io/en/latest/examples.html#docker-with-non-privileged-user
 # Create `ansible` user with sudo permissions and membership in `DEPLOY_GROUP`

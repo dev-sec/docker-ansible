@@ -1,17 +1,17 @@
 FROM amazonlinux:2023
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
 # Install Ansible and other requirements.
-RUN yum makecache --timer \
- && yum -y install initscripts \
- && yum -y update \
- && yum -y install \
+RUN yum makecache --timer && \
+    yum -y install initscripts && \
+    yum -y update && \
+    yum -y install \
       sudo \
       which \
       hostname \
       python3 \
-      python3-pip \
- && yum clean all
+      python3-pip && \
+    yum clean all
 
 RUN pip3 install ansible
 
@@ -19,8 +19,8 @@ RUN pip3 install ansible
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Install Ansible inventory file.
-RUN mkdir -p /etc/ansible
-RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
+RUN mkdir -p /etc/ansible && \
+    echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 
 # https://molecule.readthedocs.io/en/latest/examples.html#docker-with-non-privileged-user
 # Create `ansible` user with sudo permissions and membership in `DEPLOY_GROUP`

@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
 # Install dependencies.
 RUN apt-get update \

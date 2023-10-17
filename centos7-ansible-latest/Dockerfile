@@ -1,9 +1,8 @@
 FROM centos:7
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 ENV container=docker
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
-
 
 # Install systemd -- See https://hub.docker.com/_/centos/
 RUN yum -y update; yum clean all; \
@@ -38,9 +37,8 @@ RUN yum -y install yum-plugin-copr libseccomp && \
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Upgrade pip so cryptography package works.
-RUN python3 -m pip install --upgrade pip
-
-RUN pip3 install ansible
+RUN python3 -m pip install --upgrade pip && \
+    pip3 install ansible
 
 # https://molecule.readthedocs.io/en/latest/examples.html#docker-with-non-privileged-user
 # Create `ansible` user with sudo permissions and membership in `DEPLOY_GROUP`
