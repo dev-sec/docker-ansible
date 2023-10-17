@@ -1,5 +1,5 @@
 FROM oraclelinux:7-slim
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
 # Add Oracle EPEL repo that contains Ansible
 RUN yum-config-manager --add-repo=http://yum.oracle.com/repo/OracleLinux/OL7/developer_EPEL/x86_64/

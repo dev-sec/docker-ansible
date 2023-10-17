@@ -1,7 +1,7 @@
 FROM alpine:latest
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
-RUN apk add --update ansible
+RUN apk add --no-cache ansible
 
 # Install Ansible inventory file
 RUN mkdir -p /etc/ansible \

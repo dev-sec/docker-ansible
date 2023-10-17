@@ -1,5 +1,5 @@
 FROM amazonlinux:2
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
 # Install Ansible and other requirements.
 RUN rpm -ihv http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm

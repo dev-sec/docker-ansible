@@ -1,5 +1,5 @@
 FROM archlinux:latest
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
 # Update, install sudo and systemd, cleanup and remove unneeded unit files.
 RUN  pacman -S -y \

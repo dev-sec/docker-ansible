@@ -1,5 +1,5 @@
 FROM debian:buster
-MAINTAINER Sebastian Gumprich
+LABEL maintainer="Sebastian Gumprich"
 
 RUN apt-get update -y  &&  apt-get install --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \
