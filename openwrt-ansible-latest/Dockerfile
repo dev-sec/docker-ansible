@@ -3,6 +3,7 @@ LABEL maintainer="Sebastian Gumprich"
 
 RUN mkdir -p /var/lock && \
     opkg update && \
+    set -o pipefail && \
     if [[ $(opkg list-upgradable) ]]; then opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade; fi && \
     opkg install python3 python3-pip python3-cryptography \
     sudo bash sed shadow-su shadow-groupadd shadow-useradd shadow-usermod

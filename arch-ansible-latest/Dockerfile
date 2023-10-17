@@ -26,7 +26,7 @@ RUN pacman -S -y \
     glibc \
     python \
     ansible \
-  && yes | pacman -Scc || true
+  && pacman -Scc --noconfirm || true
 
 # Install Ansible inventory file.
 RUN mkdir /etc/ansible \
