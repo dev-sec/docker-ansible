@@ -3,3 +3,4 @@ ignored:
   - DL3008 # we don't want to pin versions
   - DL3013 # we don't want to pin versions
   - DL3018 # we don't want to pin versions
+  - DL3033 # we don't want to pin versions
