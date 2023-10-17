@@ -27,7 +27,7 @@ RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" -e "s|#baseurl=http://mirror.centos
  && yum clean all
 
 # upgrade pip because of the rust dependency error
-RUN python3 -m pip install --upgrade pip && \
+RUN python3 -m pip install --no-cache-dir --upgrade pip && \
     pip3 install ansible
 
 # Disable requiretty.

@@ -37,7 +37,7 @@ RUN yum -y install yum-plugin-copr libseccomp && \
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
 
 # Upgrade pip so cryptography package works.
-RUN python3 -m pip install --upgrade pip && \
+RUN python3 -m pip install --no-cache-dir --upgrade pip && \
     pip3 install ansible
 
 # https://molecule.readthedocs.io/en/latest/examples.html#docker-with-non-privileged-user
