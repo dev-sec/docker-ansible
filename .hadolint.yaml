@@ -1,0 +1,12 @@
+ignored:
+  - DL3007 # we don't want to pin versions
+  - DL3008 # we don't want to pin versions
+  - DL3013 # we don't want to pin versions
+  - DL3018 # we don't want to pin versions
+  - DL3033 # we don't want to pin versions
+  - DL3041 # we don't want to pin versions
+  - DL3037 # we don't want to pin versions
+  - SC2028 # using echo is ok for our case
+  - SC3009 # we don't care about POSIX compatibility
+  - SC3010 # we don't care about POSIX compatibility
+  - SC3037 # we don't care about POSIX compatibility

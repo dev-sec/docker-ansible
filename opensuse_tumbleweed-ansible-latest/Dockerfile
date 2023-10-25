@@ -2,7 +2,8 @@ FROM opensuse/tumbleweed:latest
 LABEL maintainer="Sebastian Gumprich"
 ENV container=docker
 
-RUN zypper install -y python ansible dbus-1 systemd-sysvinit shadow sudo
+RUN zypper install -y python ansible dbus-1 systemd-sysvinit shadow sudo && \
+    zypper clean
 
 RUN cp /usr/lib/systemd/system/dbus.service /etc/systemd/system/; \
     sed -i 's/OOMScoreAdjust=-900//' /etc/systemd/system/dbus.service

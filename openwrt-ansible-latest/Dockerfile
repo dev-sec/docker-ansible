@@ -1,14 +1,15 @@
 FROM openwrt/rootfs:latest
 LABEL maintainer="Sebastian Gumprich"
 
+# hadolint ignore=DL4006
 RUN mkdir -p /var/lock && \
     opkg update && \
     if [[ $(opkg list-upgradable) ]]; then opkg list-upgradable | cut -f 1 -d ' ' | xargs opkg upgrade; fi && \
     opkg install python3 python3-pip python3-cryptography \
     sudo bash sed shadow-su shadow-groupadd shadow-useradd shadow-usermod
 
-RUN pip3 install --upgrade pip && \
-    pip3 install ansible
+RUN pip3 install --no-cache-dir --upgrade pip && \
+    pip3 install --no-cache-dir ansible
 
 # Install Ansible inventory file
 RUN mkdir -p /etc/ansible \

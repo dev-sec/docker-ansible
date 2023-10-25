@@ -25,8 +25,8 @@ RUN yum makecache --timer \
  && yum clean all
 
 # upgrade pip because of the rust dependency error
-RUN python3 -m pip install --upgrade pip && \
-   pip3 install ansible
+RUN python3 -m pip install --no-cache-dir --upgrade pip && \
+   pip3 install --no-cache-dir ansible
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
