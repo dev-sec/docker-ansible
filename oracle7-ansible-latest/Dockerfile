@@ -12,9 +12,8 @@ RUN yum makecache fast \
       which \
       ansible \
       systemd \
- && yum clean all
-
-RUN rm -rf /var/cache/yum;
+ && yum clean all  --enablerepo=* \
+ && rm -rf /var/cache/yum
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
