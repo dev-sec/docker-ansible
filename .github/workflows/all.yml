@@ -32,6 +32,7 @@ jobs:
           - fedora37-ansible
           - fedora38-ansible
           - fedora39-ansible
+          - fedora40-ansible
           - opensuse_tumbleweed-ansible
           - openwrt-ansible
           - oracle7-ansible
