@@ -20,6 +20,7 @@ They are meant for testing purposes and are mainly used for [dev-sec](https://gi
 | [Ubuntu 18.04][ubuntu]            | [docker-ubuntu1804-ansible-latest][]          | [ghcr.io/dev-sec/docker-ubuntu1804-ansible-latest][]          | [rndmh3ro/docker-ubuntu1804-ansible-latest][]          |
 | [Ubuntu 20.04][ubuntu]            | [docker-ubuntu2004-ansible-latest][]          | [ghcr.io/dev-sec/docker-ubuntu2004-ansible-latest][]          | [rndmh3ro/docker-ubuntu2004-ansible-latest][]          |
 | [Ubuntu 22.04][ubuntu]            | [docker-ubuntu2204-ansible-latest][]          | [ghcr.io/dev-sec/docker-ubuntu2204-ansible-latest][]          | [rndmh3ro/docker-ubuntu2204-ansible-latest][]          |
+| [Ubuntu 24.04][ubuntu]            | [docker-ubuntu2404-ansible-latest][]          | [ghcr.io/dev-sec/docker-ubuntu2404-ansible-latest][]          | [rndmh3ro/docker-ubuntu2404-ansible-latest][]          |
 | [Alpine][alpine]                  | [docker-alpine-ansible-latest][]              | [ghcr.io/dev-sec/docker-alpine-ansible-latest][]              | [rndmh3ro/docker-alpine-ansible-latest][]              |
 | [Amazon Linux 2][amazon]          | [docker-amazon2-ansible-latest][]             | [ghcr.io/dev-sec/docker-amazon2-ansible-latest][]             | [rndmh3ro/docker-amazon2-ansible-latest][]             |
 | [Amazon Linux 2023][amazon]       | [docker-amazon2023-ansible-latest][]          | [ghcr.io/dev-sec/docker-amazon2023-ansible-latest][]          | [rndmh3ro/docker-amazon2023-ansible-latest][]          |
@@ -58,6 +59,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [docker-ubuntu1804-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu1804-ansible-latest/Dockerfile
 [docker-ubuntu2004-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu2004-ansible-latest/Dockerfile
 [docker-ubuntu2204-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu2204-ansible-latest/Dockerfile
+[docker-ubuntu2404-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/ubuntu2404-ansible-latest/Dockerfile
 [docker-alpine-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/alpine-ansible-latest/Dockerfile
 [docker-amazon2-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon2-ansible-latest/Dockerfile
 [docker-amazon2023-ansible-latest]: https://github.com/rndmh3ro/docker-ansible/blob/master/amazon2023-ansible-latest/Dockerfile
@@ -80,6 +82,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [ghcr.io/dev-sec/docker-ubuntu1804-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-ubuntu1804-ansible
 [ghcr.io/dev-sec/docker-ubuntu2004-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-ubuntu2004-ansible
 [ghcr.io/dev-sec/docker-ubuntu2204-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-ubuntu2204-ansible
+[ghcr.io/dev-sec/docker-ubuntu2404-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-ubuntu2404-ansible
 [ghcr.io/dev-sec/docker-alpine-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-alpine-ansible
 [ghcr.io/dev-sec/docker-amazon2-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-amazon2-ansible
 [ghcr.io/dev-sec/docker-amazon2023-ansible-latest]: https://github.com/dev-sec/docker-ansible/pkgs/container/docker-amazon2023-ansible
@@ -102,6 +105,7 @@ Sebastian Gumprich <github@gumpri.ch>
 [rndmh3ro/docker-ubuntu1804-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu1804-ansible
 [rndmh3ro/docker-ubuntu2004-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu2004-ansible
 [rndmh3ro/docker-ubuntu2204-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu2204-ansible
+[rndmh3ro/docker-ubuntu2404-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-ubuntu2404-ansible
 [rndmh3ro/docker-alpine-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-alpine-ansible
 [rndmh3ro/docker-amazon2-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon2-ansible
 [rndmh3ro/docker-amazon2023-ansible-latest]: https://hub.docker.com/r/rndmh3ro/docker-amazon2023-ansible
