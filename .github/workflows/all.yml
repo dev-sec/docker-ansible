@@ -39,6 +39,7 @@ jobs:
           - ubuntu1804-ansible
           - ubuntu2004-ansible
           - ubuntu2204-ansible
+          - ubuntu2404-ansible
         platforms:
           - linux/amd64
             # #- linux/arm64
