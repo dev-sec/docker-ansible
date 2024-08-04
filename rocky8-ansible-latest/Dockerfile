@@ -21,13 +21,13 @@ RUN yum makecache --timer \
       sudo \
       which \
       hostname \
-      python3 \
-      python3-pip \
+      python3.12 \
+      python3.12-pip \
  && yum clean all
 
 # upgrade pip because of the rust dependency error
-RUN pip3 install --no-cache-dir --upgrade pip && \
-    pip3 install --no-cache-dir ansible
+RUN pip3.12 install --no-cache-dir --upgrade pip && \
+    pip3.12 install --no-cache-dir ansible
 
 # Disable requiretty.
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
