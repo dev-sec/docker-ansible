@@ -1,7 +1,7 @@
 FROM alpine:latest
 LABEL maintainer="Sebastian Gumprich"
 
-RUN apk add --no-cache ansible sudo
+RUN apk add --no-cache ansible sudo openrc linux-pam openssh-server-pam bash
 
 # Install Ansible inventory file
 RUN mkdir -p /etc/ansible \
