@@ -2,7 +2,7 @@ FROM opensuse/tumbleweed:latest
 LABEL maintainer="Sebastian Gumprich"
 ENV container=docker
 
-RUN zypper install -y python ansible dbus-1 systemd-sysvinit shadow sudo && \
+RUN zypper install -y python311 ansible dbus-1 systemd-sysvinit shadow sudo && \
     zypper clean
 
 RUN cp /usr/lib/systemd/system/dbus.service /etc/systemd/system/; \
@@ -24,7 +24,7 @@ RUN set -xe \
   && useradd -m -g ${ANSIBLE_USER} ${ANSIBLE_USER} \
   && usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} \
   && usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} \
-  && sed -i "s/^# \(%${SUDO_GROUP} ALL=(ALL:ALL) NOPASSWD: ALL\)/\\1/g" /etc/sudoers
+  && sed -i "s/^# \(%${SUDO_GROUP} ALL=(ALL:ALL) NOPASSWD: ALL\)/\\1/g" /usr/etc/sudoers
 
 # delete file created by systemd that prevents login via ssh
 RUN rm -f /{var/run,etc,run}/nologin
