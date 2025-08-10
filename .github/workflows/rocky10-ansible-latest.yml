@@ -1,11 +1,13 @@
-name: build-all
-
+name: rocky10-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
-  schedule:
-    - cron: '10 2 * * 1'
-
+  push:
+    paths:
+      - 'rocky10-ansible-latest/**'
+  pull_request:
+    paths:
+      - 'rocky10-ansible-latest/**'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -16,43 +18,10 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - almalinux8-ansible
-          - almalinux9-ansible
-          - almalinux10-ansible
-          - alpine-ansible
-          - amazon2-ansible
-          - amazon2023-ansible
-          - arch-ansible
-          - centosstream8-ansible
-          - centosstream9-ansible
-          - rocky8-ansible
-          - rocky9-ansible
           - rocky10-ansible
-          - debian11-ansible
-          - debian12-ansible
-          - debian13-ansible
-          - fedora37-ansible
-          - fedora38-ansible
-          - fedora39-ansible
-          - fedora40-ansible
-          - opensuse_tumbleweed-ansible
-          - openwrt-ansible
-          - oracle7-ansible
-          - ubuntu1804-ansible
-          - ubuntu2004-ansible
-          - ubuntu2204-ansible
-          - ubuntu2404-ansible
         platforms:
           - linux/amd64
-            # #- linux/arm64
-        exclude:
-          - dockerimage: oracle7-ansible
-            platforms: linux/arm64
-          - dockerimage: arch-ansible
-            platforms: linux/arm64
-          - dockerimage: centos7-ansible
-            platforms: linux/arm64
-
+          #- linux/arm64
     steps:
       -
         name: Checkout
@@ -108,12 +77,3 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}:latest
           platforms: ${{ matrix.platforms }}
         if: github.ref == 'refs/heads/master'
-      -
-        name: Update repo description
-        uses: peter-evans/dockerhub-description@v4
-        if: github.repository == 'rndmh3ro/docker-ansible' && github.ref == 'refs/heads/master'
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ secrets.DOCKERHUB_USERNAME }}/docker-${{ matrix.dockerimage }}
-          short-description: ${{ github.event.repository.description }}

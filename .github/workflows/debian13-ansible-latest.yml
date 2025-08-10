@@ -1,13 +1,13 @@
-name: centos7-ansible-latest
+name: debian13-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
     paths:
-      - 'centos7-ansible-latest/**'
+      - 'debian13-ansible-latest/**'
   pull_request:
     paths:
-      - 'centos7-ansible-latest/**'
+      - 'debian13-ansible-latest/**'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -18,10 +18,10 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - centos7-ansible
+          - debian13-ansible
         platforms:
           - linux/amd64
-          # #- linux/arm64  # not supported upstream
+          #- linux/arm64
     steps:
       -
         name: Checkout

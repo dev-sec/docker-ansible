@@ -1,19 +1,22 @@
-FROM debian:buster
+FROM debian:trixie
 LABEL maintainer="Sebastian Gumprich"
 
-RUN apt-get update -y  &&  apt-get install -y --fix-missing && \
+RUN apt-get update -y && apt-get install -y --no-install-recommends --fix-missing && \
     DEBIAN_FRONTEND=noninteractive \
-    apt-get install -y \
-      python python-yaml sudo \
-      curl gcc python-pip python-dev libffi-dev libssl-dev systemd && \
+    apt-get install -y --no-install-recommends \
+      python3 python3-yaml sudo \
+      curl gcc python3-pip python3-dev libffi-dev libssl-dev systemd && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+# Allow installing stuff to system Python.
+RUN rm -f /usr/lib/python3.13/EXTERNALLY-MANAGED
 
 RUN pip install --no-cache-dir --upgrade cffi && \
     pip install --no-cache-dir ansible
 
 RUN apt-get -f -y --auto-remove remove \
-      gcc python-pip python-dev libffi-dev libssl-dev && \
+      gcc python3-pip python3-dev libffi-dev libssl-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /usr/share/doc /usr/share/man
 
@@ -33,9 +36,6 @@ RUN set -xe \
   && usermod -aG ${SUDO_GROUP} ${ANSIBLE_USER} \
   && usermod -aG ${DEPLOY_GROUP} ${ANSIBLE_USER} \
   && sed -i "/^%${SUDO_GROUP}/s/ALL\$/NOPASSWD:ALL/g" /etc/sudoers
-
-# Make sure systemd doesn't start agettys on tty[1-6].
-RUN rm -f /lib/systemd/system/multi-user.target.wants/getty.target
 
 # delete file created by systemd that prevents login via ssh
 RUN rm -f /{var/run,etc,run}/nologin
