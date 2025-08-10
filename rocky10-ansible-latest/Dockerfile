@@ -1,21 +1,12 @@
-FROM centos:8
+FROM docker.io/rockylinux/rockylinux:10
 LABEL maintainer="Sebastian Gumprich"
 ENV container=docker
 
 # Install systemd -- See https://hub.docker.com/_/centos/
-RUN yum -y update; yum clean all; \
-    for i in /lib/systemd/system/sysinit.target.wants/*; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done; \
-    rm -f /lib/systemd/system/multi-user.target.wants/*;\
-    rm -f /etc/systemd/system/*.wants/*;\
-    rm -f /lib/systemd/system/local-fs.target.wants/*; \
-    rm -f /lib/systemd/system/sockets.target.wants/*udev*; \
-    rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
-    rm -f /lib/systemd/system/basic.target.wants/*;\
-    rm -f /lib/systemd/system/anaconda.target.wants/*;
+RUN yum -y update; yum clean all;
 
 # Install Ansible and other requirements.
-RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g" /etc/yum.repos.d/CentOS-Linux-* \
- && yum makecache --timer \
+RUN yum makecache --timer \
  && yum -y install epel-release initscripts \
  && yum -y update \
  && yum -y install \
@@ -27,7 +18,7 @@ RUN sed -i -e "s|mirrorlist=|#mirrorlist=|g" -e "s|#baseurl=http://mirror.centos
  && yum clean all
 
 # upgrade pip because of the rust dependency error
-RUN python3 -m pip install --no-cache-dir --upgrade pip && \
+RUN pip3 install --no-cache-dir --upgrade pip && \
     pip3 install --no-cache-dir ansible
 
 # Disable requiretty.
