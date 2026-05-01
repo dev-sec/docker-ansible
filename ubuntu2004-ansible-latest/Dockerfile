@@ -15,7 +15,7 @@ RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 # Install Ansible
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-     ansible \
+     ansible python3.9 \
   && rm -rf /var/lib/apt/lists/* \
   && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean
