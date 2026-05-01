@@ -15,13 +15,10 @@ RUN sed -i 's/^\($ModLoad imklog\)/#\1/' /etc/rsyslog.conf
 # Install Ansible
 RUN apt-get update \
   && apt-get install -y --no-install-recommends \
-     ansible python3.9 \
+     ansible \
   && rm -rf /var/lib/apt/lists/* \
   && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean
-
-# Fix python-apt for Python 3.9
-RUN cp /usr/lib/python3/dist-packages/apt_pkg.cpython-38-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/apt_pkg.cpython-39-x86_64-linux-gnu.so
 
 # Install Ansible inventory file
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
