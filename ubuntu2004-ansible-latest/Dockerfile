@@ -20,6 +20,9 @@ RUN apt-get update \
   && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
   && apt-get clean
 
+# Fix python-apt for Python 3.9
+RUN cp /usr/lib/python3/dist-packages/apt_pkg.cpython-38-x86_64-linux-gnu.so /usr/lib/python3/dist-packages/apt_pkg.cpython-39-x86_64-linux-gnu.so
+
 # Install Ansible inventory file
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
 
