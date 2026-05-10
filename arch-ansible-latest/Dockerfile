@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM docker.io/archlinux:latest
 LABEL maintainer="Sebastian Gumprich"
 
 # Update, install sudo and systemd, cleanup and remove unneeded unit files.

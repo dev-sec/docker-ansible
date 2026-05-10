@@ -32,16 +32,16 @@ jobs:
           - debian12-ansible
           - debian13-ansible
           - fedora37-ansible
-          - fedora38-ansible
-          - fedora39-ansible
-          - fedora40-ansible
+          - fedora42-ansible
+          - fedora43-ansible
+          - fedora44-ansible
           - opensuse_tumbleweed-ansible
           - openwrt-ansible
           - oracle7-ansible
           - ubuntu1804-ansible
-          - ubuntu2004-ansible
           - ubuntu2204-ansible
           - ubuntu2404-ansible
+          - ubuntu2604-ansible
         platforms:
           - linux/amd64
             # #- linux/arm64
