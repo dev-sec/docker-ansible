@@ -1,13 +1,13 @@
-name: fedora39-ansible-latest
+name: ubuntu2604-ansible-latest
 on:
   # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
     paths:
-      - 'fedora39-ansible-latest/**'
+      - 'ubuntu2604-ansible-latest/**'
   pull_request:
     paths:
-      - 'fedora39-ansible-latest/**'
+      - 'ubuntu2604-ansible-latest/**'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -18,10 +18,9 @@ jobs:
       fail-fast: false
       matrix:
         dockerimage:
-          - fedora39-ansible
+          - ubuntu2604-ansible
         platforms:
           - linux/amd64
-          #- linux/arm64
     steps:
       -
         name: Checkout
@@ -38,8 +37,8 @@ jobs:
         with:
           context: ${{ matrix.dockerimage }}-latest
           tags: docker-${{ matrix.dockerimage }}:test
-          platforms: ${{ matrix.platforms }}
           load: true
+          platforms: ${{ matrix.platforms }}
       -
         name: Test
         run: |

@@ -1,4 +1,4 @@
-FROM fedora:39
+FROM fedora:43
 LABEL maintainer="Sebastian Gumprich, Nejc Habjan, Diego Louzan, Max Wittig"
 
 # Enable systemd.
