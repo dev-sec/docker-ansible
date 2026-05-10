@@ -13,7 +13,7 @@ RUN dnf -y install systemd && dnf clean all && \
     rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 RUN dnf -y update \
-    && dnf -y install ansible python python3-libselinux \
+    && dnf -y install ansible python python3-libselinux python3-dnf \
     && dnf clean all
 
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
