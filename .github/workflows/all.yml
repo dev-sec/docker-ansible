@@ -65,7 +65,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
       -
         name: Build and export to Docker
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ${{ matrix.dockerimage }}-latest
           tags: docker-${{ matrix.dockerimage }}:test
@@ -85,7 +85,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
       -
         name: Build and push to ghcr.io
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ${{ matrix.dockerimage }}-latest
           push: true
@@ -101,7 +101,7 @@ jobs:
         if: github.ref == 'refs/heads/master'
       -
         name: Build and push
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: ${{ matrix.dockerimage }}-latest
           push: true
